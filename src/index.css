@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --muted: #666;
+  --accent: #2b6ef6;
+  --danger: #e85b5b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color: #111;
+}
+
+.app-container {
+  max-width: 920px;
+  margin: 28px auto;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 12px;
+}
+h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 20px 0;
+}
+
+.btn {
+  border: 1px solid #ddd;
+  background: var(--card);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 6px;
+}
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+.btn.secondary {
+  background: #fff;
+}
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+}
+.btn.tiny {
+  padding: 4px 7px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.country-list .country-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.country-row,
+.state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.country-info,
+.state-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-name {
+  font-size: 16px;
+}
+.state-name {
+  font-size: 14px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.states-area,
+.cities-area {
+  margin-top: 10px;
+  padding-left: 26px;
+}
+
+.state-list .state-card {
+  padding: 8px;
+  border-radius: 8px;
+  background: #fbfbff;
+  margin-bottom: 8px;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+.city-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: #fff;
+  margin-bottom: 6px;
+  border: 1px solid #eee;
+}
+
+.empty {
+  padding: 10px;
+  color: var(--muted);
+  background: #fff;
+  border-radius: 8px;
+}
+footer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
 }
