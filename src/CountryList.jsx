@@ -32,7 +32,7 @@ export default function CountryList({
                     )
                   }
                 >
-                  {expandedCountry === country.id ? "▾" : "▸"}
+                  {expandedCountry === country.id ? "v" : ">"}
                 </button>
                 <strong className="country-name">{country.name}</strong>
                 <span className="meta">({country.states.length} states)</span>

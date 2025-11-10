@@ -67,7 +67,6 @@ function App() {
       return;
     setCountries((prev) => prev.filter((c) => c.id !== countryId));
   }
-
   function addState(countryId) {
     const stateName = prompt("Enter state name:");
     if (!stateName) return;
@@ -85,14 +84,12 @@ function App() {
         newState.cities.push({ id: uid("ct_"), name: cityName.trim() });
       }
     }
-
     setCountries((prev) =>
       prev.map((c) =>
         c.id === countryId ? { ...c, states: [newState, ...c.states] } : c
       )
     );
   }
-
   function editState(countryId, stateId) {
     const country = countries.find((c) => c.id === countryId);
     if (!country) return;
