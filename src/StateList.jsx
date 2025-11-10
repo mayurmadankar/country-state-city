@@ -28,7 +28,7 @@ export default function StateList({
                     )
                   }
                 >
-                  {expandedState === state.id ? "▾" : "▸"}
+                  {expandedState === state.id ? "v" : ">"}
                 </button>
                 <span className="state-name">{state.name}</span>
                 <span className="meta">({state.cities.length} cities)</span>
